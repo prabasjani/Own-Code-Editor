@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSCode</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Nav Bar container -->
+        <div class="nav-bar">
+            <div class="left">
+                <a class="html"><i class='bx bxl-html5'></i>HTML</a>
+                <a class="css"><i class='bx bxl-css3' ></i>CSS</a>
+                <a class="js"><i class='bx bxl-javascript' ></i>JavaScript</a>
+            </div>
+
+            <div class="right">
+                <a class="live-server"><i class='bx bx-station'></i>Live Server</a>
+                <iframe id="live"></iframe>
+            </div>
+        </div>
+        <!-- HTML container -->
+        <div class="html-container">
+            <textarea id="html-code" placeholder="Type Your HTML Code here" onkeyup="run();"></textarea>
+        </div>
+
+        <!-- css container -->
+        <div class="css-container">
+            <textarea id="css-code" placeholder="Type Your CSS Code here" onkeyup="run();"></textarea>
+        </div>
+
+        <!-- js container -->
+        <div class="js-container">
+            <textarea id="js-code" placeholder="Type Your JavaScript Code here" onkeyup="run();"></textarea>
+        </div>
+        
+        <div class="live-load">
+            <h3>PrabaStudio Code Live Server</h3>
+            <div class="live-bar">
+                <a class="btnc close"><i class='bx bx-x'></i></a>
+                <a class="btnc min"><i class='bx bx-minus'></i></a>
+                <a class="btnc full-scr"><i class='bx bx-expand-alt'></i></a>
+            </div>
+        </div>
+    </div>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- <button id="btn">Click Me</button>
+
+button{
+    font-size: 30px;
+    padding: 20px;
+    background: red;
+}
+
+const btn = document.getElementById('btn');
+
+btn.onclick = () => {
+    btn.style.background = 'green';
+    btn.classList.remove('background');
+} -->
