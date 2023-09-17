@@ -26,6 +26,7 @@ css.onclick = () => {
     htmlContainer.style.display = 'none';
     cssContainer.style.display = 'block';
     jsContainer.style.display = 'none';
+
     html.classList.remove('active');
     css.classList.add('active');
     js.classList.remove('active');
@@ -38,6 +39,7 @@ js.onclick = () => {
     htmlContainer.style.display = 'none';
     cssContainer.style.display = 'none';
     jsContainer.style.display = 'block';
+
     html.classList.remove('active');
     css.classList.remove('active');
     js.classList.add('active');
@@ -61,6 +63,19 @@ liveServer.onclick = () => {
 }
 
 
+// liveServer toggle buttons activate
+const liveClose = document.querySelector('.close');
+
+liveClose.onclick = () => {
+    liveLoadContainer.style.opacity = '0';
+    liveLoad.style.display = 'none';
+    liveServer.classList.remove('active');
+
+    // liveServer closed and open HTML page 
+    html.classList.add('active');
+    htmlContainer.style.display = 'block';
+}
+
 // Run The code Editor
 function run(){
     const htmlCode = document.getElementById('html-code').value;
@@ -71,6 +86,30 @@ function run(){
     liveCode.contentDocument.body.innerHTML = htmlCode+"<style>"+cssCode +"</style>";
     liveCode.contentWindow.eval(jsCode);
 }
+
+
+// Welcome page auto hide and closing
+const autoHide = document.querySelector('.welcome-container');
+const closeBtn = document.querySelector('.closing');
+
+closeBtn.onclick = () => {
+    autoHide.style.display = 'none';
+    html.classList.add('active');
+    htmlContainer.style.display = 'block';
+}
+
+setTimeout(() => {
+    autoHide.style.display = 'none';
+    html.classList.add('active');
+    css.classList.remove('active');
+    js.classList.remove('active');
+    liveServer.classList.remove('active');
+
+    // liveLoadContainer.style.opacity = '0';
+    // liveLoad.style.display = 'none';
+
+    htmlContainer.style.display = 'block';
+},10000);
 
 
 
